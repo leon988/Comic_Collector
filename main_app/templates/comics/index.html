@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Comic Series List</h1>
+
+{% for comic in comics %}
+  <div class="card">
+    <a href="/comics/{{ comic.id }}">
+      <div class="card-content">
+      <span class="card-title">{{ comic.title }}</span>
+      <p>Description: {{ comic.description }}</p>
+      <p>Creator: {{ comic.creator }}</p>
+      <p>First Appearance: {{ comic.first_appearance }}</p>
+      <p>Publisher: {{ comic.publisher }}</p>
+    </div>
+    </a>
+  </div>
+  
+{% endfor %}
+
+{% endblock %}
